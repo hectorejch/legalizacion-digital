@@ -1,0 +1,31 @@
+package ar.com.cnpmweb.legalizaciondigital.dto;
+
+public class TokenResponse {
+    private String token;
+    private boolean exito;
+    private String mensaje;
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public boolean isExito() {
+        return exito;
+    }
+
+    public void setExito(boolean exito) {
+        this.exito = exito;
+    }
+
+    public String getMensaje() {
+        return mensaje;
+    }
+
+    public void setMensaje(String mensaje) {
+        this.mensaje = mensaje;
+    }
+}

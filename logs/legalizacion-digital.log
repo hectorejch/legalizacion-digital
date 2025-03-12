@@ -1,0 +1,494 @@
+2025-03-12 00:13:24,121 INFO o.s.b.StartupInfoLogger [main] Starting LegalizacionDigitalApplication using Java 21.0.6 with PID 11176 (C:\Users\Hector\Documents\Desarrollo\legalizacion-digital\target\classes started by Hector in C:\Users\Hector\Documents\Desarrollo\legalizacion-digital)
+2025-03-12 00:13:24,138 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-03-12 00:13:24,149 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-03-12 00:13:26,516 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-12 00:13:26,726 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 169 ms. Found 6 JPA repository interfaces.
+2025-03-12 00:13:28,815 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2025-03-12 00:13:28,831 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-12 00:13:28,840 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2025-03-12 00:13:28,844 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-03-12 00:13:29,179 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2025-03-12 00:13:29,217 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 4873 ms
+2025-03-12 00:13:30,089 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-12 00:13:30,406 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-03-12 00:13:30,492 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-03-12 00:13:31,056 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-12 00:13:31,121 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-03-12 00:13:31,543 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3688baab
+2025-03-12 00:13:31,549 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-03-12 00:13:31,654 WARN o.h.d.Dialect [main] HHH000511: The 5.5.22 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2025-03-12 00:13:31,668 WARN o.h.e.j.d.i.DialectFactoryImpl [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-12 00:13:35,509 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-12 00:13:35,519 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-12 00:13:36,713 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-12 00:13:38,798 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-12 00:13:39,462 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@f2df380, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2c3762c7, org.springframework.security.web.context.SecurityContextHolderFilter@3b4a77be, org.springframework.security.web.header.HeaderWriterFilter@5b71ccf2, org.springframework.web.filter.CorsFilter@6cd0f9a4, org.springframework.security.web.authentication.logout.LogoutFilter@54d5500e, ar.com.cnpmweb.legalizaciondigital.security.JwtAuthorizationFilter@4d992634, ar.com.cnpmweb.legalizaciondigital.security.JwtAuthenticationFilter@2d487df4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@53628ff6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@505e8d48, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3a7e13c0, org.springframework.security.web.session.SessionManagementFilter@23e0ef68, org.springframework.security.web.access.ExceptionTranslationFilter@7731504, org.springframework.security.web.access.intercept.AuthorizationFilter@835718b]
+2025-03-12 00:13:40,120 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2025-03-12 00:13:40,195 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8080 (http) with context path ''
+2025-03-12 00:13:40,212 INFO o.s.b.StartupInfoLogger [main] Started LegalizacionDigitalApplication in 18.089 seconds (process running for 19.49)
+2025-03-12 00:14:51,956 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-12 00:14:51,960 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2025-03-12 00:14:51,966 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 2 ms
+2025-03-12 00:14:52,018 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-2] Securing POST /api/token
+2025-03-12 00:14:52,104 WARN o.s.w.s.h.HandlerMappingIntrospector$CacheResultLogHelper [http-nio-8080-exec-2] Cache miss for REQUEST dispatch to '/api/token' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2025-03-12 00:14:52,167 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter [http-nio-8080-exec-2] Set SecurityContextHolder to anonymous SecurityContext
+2025-03-12 00:14:52,171 WARN o.s.w.s.h.HandlerMappingIntrospector$CacheResultLogHelper [http-nio-8080-exec-2] Cache miss for REQUEST dispatch to '/api/token' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2025-03-12 00:14:52,184 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-2] Secured POST /api/token
+2025-03-12 00:14:52,397 INFO a.c.c.l.c.TokenController [http-nio-8080-exec-2] Solicitud de token para el usuario API: api_client
+2025-03-12 00:14:52,399 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-2] Generando token para el usuario API: api_client
+2025-03-12 00:14:52,819 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-2] Token generado exitosamente para: api_client
+2025-03-12 00:14:52,820 INFO a.c.c.l.c.TokenController [http-nio-8080-exec-2] Token generado exitosamente para: api_client
+2025-03-12 00:15:51,814 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-5] Securing PUT /api/auth
+2025-03-12 00:15:51,978 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-5] Token validado para: api_client
+2025-03-12 00:15:51,979 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-5] Token JWT válido para el usuario: api_client
+2025-03-12 00:15:51,982 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-5] Secured PUT /api/auth
+2025-03-12 00:15:51,988 INFO a.c.c.l.c.AuthController [http-nio-8080-exec-5] Recibida solicitud de autenticación para el usuario: admin
+2025-03-12 00:15:51,990 DEBUG a.c.c.l.s.AuthService [http-nio-8080-exec-5] Verificando credenciales para el usuario: admin
+2025-03-12 00:15:52,002 DEBUG a.c.c.l.s.AuthService [http-nio-8080-exec-5] Credenciales inválidas para el usuario: admin
+2025-03-12 00:15:52,006 WARN a.c.c.l.c.AuthController [http-nio-8080-exec-5] Autenticación fallida para el usuario: admin
+2025-03-12 00:16:08,523 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-7] Securing PUT /api/auth
+2025-03-12 00:16:08,544 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-7] Token validado para: api_client
+2025-03-12 00:16:08,546 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-7] Token JWT válido para el usuario: api_client
+2025-03-12 00:16:08,552 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-7] Secured PUT /api/auth
+2025-03-12 00:16:08,559 INFO a.c.c.l.c.AuthController [http-nio-8080-exec-7] Recibida solicitud de autenticación para el usuario: admin
+2025-03-12 00:16:08,574 DEBUG a.c.c.l.s.AuthService [http-nio-8080-exec-7] Verificando credenciales para el usuario: admin
+2025-03-12 00:16:08,580 DEBUG a.c.c.l.s.AuthService [http-nio-8080-exec-7] Credenciales válidas para el usuario: admin
+2025-03-12 00:16:08,683 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-7] Verificando si el escribano con matrícula 200 es suplente de alguien en la fecha Wed Mar 12 00:16:08 ART 2025
+2025-03-12 00:16:08,694 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-7] Verificando si el escribano 200 es suplente de alguien en la fecha Wed Mar 12 00:16:08 ART 2025
+2025-03-12 00:16:08,717 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-7] El escribano 200 no es suplente de nadie en la fecha Wed Mar 12 00:16:08 ART 2025
+2025-03-12 00:16:08,728 INFO a.c.c.l.c.AuthController [http-nio-8080-exec-7] Autenticación: true, Habilitación: true, Suplencias disponibles: false para el usuario: admin
+2025-03-12 00:19:17,282 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-10] Securing PUT /api/auth
+2025-03-12 00:19:17,291 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-10] Token validado para: api_client
+2025-03-12 00:19:17,292 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-10] Token JWT válido para el usuario: api_client
+2025-03-12 00:19:17,295 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-10] Secured PUT /api/auth
+2025-03-12 00:19:17,299 INFO a.c.c.l.c.AuthController [http-nio-8080-exec-10] Recibida solicitud de autenticación para el usuario: admin
+2025-03-12 00:19:17,302 DEBUG a.c.c.l.s.AuthService [http-nio-8080-exec-10] Verificando credenciales para el usuario: admin
+2025-03-12 00:19:17,310 DEBUG a.c.c.l.s.AuthService [http-nio-8080-exec-10] Credenciales válidas para el usuario: admin
+2025-03-12 00:19:17,324 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-10] Verificando si el escribano con matrícula 200 es suplente de alguien en la fecha Wed Mar 12 00:19:17 ART 2025
+2025-03-12 00:19:17,330 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-10] Verificando si el escribano 200 es suplente de alguien en la fecha Wed Mar 12 00:19:17 ART 2025
+2025-03-12 00:19:17,338 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-10] El escribano 200 no es suplente de nadie en la fecha Wed Mar 12 00:19:17 ART 2025
+2025-03-12 00:19:17,346 INFO a.c.c.l.c.AuthController [http-nio-8080-exec-10] Autenticación: true, Habilitación: true, Suplencias disponibles: false para el usuario: admin
+2025-03-12 00:19:19,418 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-1] Securing PUT /api/auth
+2025-03-12 00:19:19,429 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-1] Token validado para: api_client
+2025-03-12 00:19:19,432 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-1] Token JWT válido para el usuario: api_client
+2025-03-12 00:19:19,435 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-1] Secured PUT /api/auth
+2025-03-12 00:19:19,439 INFO a.c.c.l.c.AuthController [http-nio-8080-exec-1] Recibida solicitud de autenticación para el usuario: admin
+2025-03-12 00:19:19,443 DEBUG a.c.c.l.s.AuthService [http-nio-8080-exec-1] Verificando credenciales para el usuario: admin
+2025-03-12 00:19:19,449 DEBUG a.c.c.l.s.AuthService [http-nio-8080-exec-1] Credenciales válidas para el usuario: admin
+2025-03-12 00:19:19,461 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-1] Verificando si el escribano con matrícula 200 es suplente de alguien en la fecha Wed Mar 12 00:19:19 ART 2025
+2025-03-12 00:19:19,467 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-1] Verificando si el escribano 200 es suplente de alguien en la fecha Wed Mar 12 00:19:19 ART 2025
+2025-03-12 00:19:19,481 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-1] El escribano 200 no es suplente de nadie en la fecha Wed Mar 12 00:19:19 ART 2025
+2025-03-12 00:19:19,483 INFO a.c.c.l.c.AuthController [http-nio-8080-exec-1] Autenticación: true, Habilitación: true, Suplencias disponibles: false para el usuario: admin
+2025-03-12 00:19:45,313 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-3] Securing PUT /api/auth
+2025-03-12 00:19:45,327 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-3] Token validado para: api_client
+2025-03-12 00:19:45,328 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-3] Token JWT válido para el usuario: api_client
+2025-03-12 00:19:45,330 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-3] Secured PUT /api/auth
+2025-03-12 00:19:45,333 INFO a.c.c.l.c.AuthController [http-nio-8080-exec-3] Recibida solicitud de autenticación para el usuario: admin
+2025-03-12 00:19:45,337 DEBUG a.c.c.l.s.AuthService [http-nio-8080-exec-3] Verificando credenciales para el usuario: admin
+2025-03-12 00:19:45,342 DEBUG a.c.c.l.s.AuthService [http-nio-8080-exec-3] Credenciales válidas para el usuario: admin
+2025-03-12 00:19:45,356 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-3] Verificando si el escribano con matrícula 200 es suplente de alguien en la fecha Wed Mar 12 00:19:45 ART 2025
+2025-03-12 00:19:45,361 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-3] Verificando si el escribano 200 es suplente de alguien en la fecha Wed Mar 12 00:19:45 ART 2025
+2025-03-12 00:19:45,394 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-3] El escribano 200 es suplente del escribano 100 en la fecha Wed Mar 12 00:19:45 ART 2025
+2025-03-12 00:19:45,396 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-3] El escribano 200 es suplente de 1 escribanos en la fecha Wed Mar 12 00:19:45 ART 2025
+2025-03-12 00:19:45,403 INFO a.c.c.l.c.AuthController [http-nio-8080-exec-3] Autenticación: true, Habilitación: true, Suplencias disponibles: true para el usuario: admin
+2025-03-12 00:20:25,599 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-2] Securing PUT /api/auth
+2025-03-12 00:20:25,608 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-2] Token validado para: api_client
+2025-03-12 00:20:25,609 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-2] Token JWT válido para el usuario: api_client
+2025-03-12 00:20:25,613 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-2] Secured PUT /api/auth
+2025-03-12 00:20:25,616 INFO a.c.c.l.c.AuthController [http-nio-8080-exec-2] Recibida solicitud de autenticación para el usuario: admin
+2025-03-12 00:20:25,620 DEBUG a.c.c.l.s.AuthService [http-nio-8080-exec-2] Verificando credenciales para el usuario: admin
+2025-03-12 00:20:25,626 DEBUG a.c.c.l.s.AuthService [http-nio-8080-exec-2] Credenciales válidas para el usuario: admin
+2025-03-12 00:20:25,638 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-2] Verificando si el escribano con matrícula 200 es suplente de alguien en la fecha Wed Mar 12 00:20:25 ART 2025
+2025-03-12 00:20:25,646 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-2] Verificando si el escribano 200 es suplente de alguien en la fecha Wed Mar 12 00:20:25 ART 2025
+2025-03-12 00:20:25,659 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-2] El escribano 200 es suplente del escribano 100 en la fecha Wed Mar 12 00:20:25 ART 2025
+2025-03-12 00:20:25,667 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-2] El escribano 200 es suplente de 1 escribanos en la fecha Wed Mar 12 00:20:25 ART 2025
+2025-03-12 00:20:25,672 INFO a.c.c.l.c.AuthController [http-nio-8080-exec-2] Autenticación: true, Habilitación: true, Suplencias disponibles: true para el usuario: admin
+2025-03-12 00:20:35,919 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-4] Securing PUT /api/auth
+2025-03-12 00:20:35,929 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-4] Token validado para: api_client
+2025-03-12 00:20:35,931 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-4] Token JWT válido para el usuario: api_client
+2025-03-12 00:20:35,936 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-4] Secured PUT /api/auth
+2025-03-12 00:20:35,940 INFO a.c.c.l.c.AuthController [http-nio-8080-exec-4] Recibida solicitud de autenticación para el usuario: admin
+2025-03-12 00:20:35,943 DEBUG a.c.c.l.s.AuthService [http-nio-8080-exec-4] Verificando credenciales para el usuario: admin
+2025-03-12 00:20:35,948 DEBUG a.c.c.l.s.AuthService [http-nio-8080-exec-4] Credenciales válidas para el usuario: admin
+2025-03-12 00:20:35,963 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-4] Verificando si el escribano con matrícula 200 es suplente de alguien en la fecha Wed Mar 12 00:20:35 ART 2025
+2025-03-12 00:20:35,974 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-4] Verificando si el escribano 200 es suplente de alguien en la fecha Wed Mar 12 00:20:35 ART 2025
+2025-03-12 00:20:35,992 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-4] El escribano 200 es suplente del escribano 100 en la fecha Wed Mar 12 00:20:35 ART 2025
+2025-03-12 00:20:35,998 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-4] El escribano 200 es suplente de 1 escribanos en la fecha Wed Mar 12 00:20:35 ART 2025
+2025-03-12 00:20:36,000 INFO a.c.c.l.c.AuthController [http-nio-8080-exec-4] Autenticación: true, Habilitación: true, Suplencias disponibles: true para el usuario: admin
+2025-03-12 00:20:51,729 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-5] Securing PUT /api/auth
+2025-03-12 00:20:51,742 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-5] Token validado para: api_client
+2025-03-12 00:20:51,743 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-5] Token JWT válido para el usuario: api_client
+2025-03-12 00:20:51,746 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-5] Secured PUT /api/auth
+2025-03-12 00:20:51,753 INFO a.c.c.l.c.AuthController [http-nio-8080-exec-5] Recibida solicitud de autenticación para el usuario: admin
+2025-03-12 00:20:51,755 DEBUG a.c.c.l.s.AuthService [http-nio-8080-exec-5] Verificando credenciales para el usuario: admin
+2025-03-12 00:20:51,760 DEBUG a.c.c.l.s.AuthService [http-nio-8080-exec-5] Credenciales válidas para el usuario: admin
+2025-03-12 00:20:51,770 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-5] Verificando si el escribano con matrícula 200 es suplente de alguien en la fecha Wed Mar 12 00:20:51 ART 2025
+2025-03-12 00:20:51,778 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-5] Verificando si el escribano 200 es suplente de alguien en la fecha Wed Mar 12 00:20:51 ART 2025
+2025-03-12 00:20:51,785 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-5] El escribano 200 no es suplente de nadie en la fecha Wed Mar 12 00:20:51 ART 2025
+2025-03-12 00:20:51,787 INFO a.c.c.l.c.AuthController [http-nio-8080-exec-5] Autenticación: true, Habilitación: true, Suplencias disponibles: false para el usuario: admin
+2025-03-12 00:21:39,151 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-6] Securing GET /api/escribanos/100/suplente?fecha=2025-02-25
+2025-03-12 00:21:39,163 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-6] Token validado para: api_client
+2025-03-12 00:21:39,164 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-6] Token JWT válido para el usuario: api_client
+2025-03-12 00:21:39,166 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-6] Secured GET /api/escribanos/100/suplente?fecha=2025-02-25
+2025-03-12 00:21:39,179 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-6] Consultando suplente activo para la matrícula 100 en la fecha Tue Feb 25 00:00:00 ART 2025
+2025-03-12 00:21:39,181 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-6] Buscando suplente activo para la matrícula 100 en la fecha Tue Feb 25 00:00:00 ART 2025
+2025-03-12 00:21:39,187 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-6] Buscando suplente activo para el escribano 100 en la fecha Tue Feb 25 00:00:00 ART 2025
+2025-03-12 00:21:39,192 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-6] No se encontró suplente activo para la matrícula 100 en la fecha Tue Feb 25 00:00:00 ART 2025
+2025-03-12 00:22:21,482 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-7] Securing GET /api/escribanos/100/suplente?fecha=2025-03-10
+2025-03-12 00:22:21,501 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-7] Token validado para: api_client
+2025-03-12 00:22:21,506 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-7] Token JWT válido para el usuario: api_client
+2025-03-12 00:22:21,510 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-7] Secured GET /api/escribanos/100/suplente?fecha=2025-03-10
+2025-03-12 00:22:21,520 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-7] Consultando suplente activo para la matrícula 100 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 00:22:21,551 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-7] Buscando suplente activo para la matrícula 100 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 00:22:21,576 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-7] Buscando suplente activo para el escribano 100 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 00:22:21,583 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-7] Se encontró un suplente (ID: 200) para la matrícula 100 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 00:22:55,479 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-8] Securing GET /api/escribanos/registro/52/habilitados?fecha=2025-02-25
+2025-03-12 00:22:55,494 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-8] Token validado para: api_client
+2025-03-12 00:22:55,496 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-8] Token JWT válido para el usuario: api_client
+2025-03-12 00:22:55,498 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-8] Secured GET /api/escribanos/registro/52/habilitados?fecha=2025-02-25
+2025-03-12 00:22:55,505 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-8] Consultando escribanos habilitados para el registro 52 en la fecha Tue Feb 25 00:00:00 ART 2025
+2025-03-12 00:22:55,507 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-8] Buscando escribanos habilitados para el registro 52 en la fecha Tue Feb 25 00:00:00 ART 2025
+2025-03-12 00:22:55,528 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-8] Se encontraron 1 escribanos habilitados para el registro 52 en la fecha Tue Feb 25 00:00:00 ART 2025
+2025-03-12 00:23:11,158 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-9] Securing GET /api/escribanos/registro/52/habilitados?fecha=2025-03-10
+2025-03-12 00:23:11,175 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-9] Token validado para: api_client
+2025-03-12 00:23:11,185 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-9] Token JWT válido para el usuario: api_client
+2025-03-12 00:23:11,188 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-9] Secured GET /api/escribanos/registro/52/habilitados?fecha=2025-03-10
+2025-03-12 00:23:11,195 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-9] Consultando escribanos habilitados para el registro 52 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 00:23:11,201 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-9] Buscando escribanos habilitados para el registro 52 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 00:23:11,219 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-9] Se encontraron 1 escribanos habilitados para el registro 52 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 00:24:08,769 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-10] Securing GET /api/escribanos/registro/52/habilitados?fecha=2010-01-01
+2025-03-12 00:24:08,780 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-10] Token validado para: api_client
+2025-03-12 00:24:08,781 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-10] Token JWT válido para el usuario: api_client
+2025-03-12 00:24:08,790 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-10] Secured GET /api/escribanos/registro/52/habilitados?fecha=2010-01-01
+2025-03-12 00:24:08,793 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-10] Consultando escribanos habilitados para el registro 52 en la fecha Fri Jan 01 00:00:00 ART 2010
+2025-03-12 00:24:08,794 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-10] Buscando escribanos habilitados para el registro 52 en la fecha Fri Jan 01 00:00:00 ART 2010
+2025-03-12 00:24:08,811 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-10] Se encontraron 0 escribanos habilitados para el registro 52 en la fecha Fri Jan 01 00:00:00 ART 2010
+2025-03-12 00:25:55,845 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-2] Securing GET /api/escribanos/registro/52/habilitados?fecha=2025-03-10
+2025-03-12 00:25:55,856 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-2] Token validado para: api_client
+2025-03-12 00:25:55,857 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-2] Token JWT válido para el usuario: api_client
+2025-03-12 00:25:55,860 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-2] Secured GET /api/escribanos/registro/52/habilitados?fecha=2025-03-10
+2025-03-12 00:25:55,863 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-2] Consultando escribanos habilitados para el registro 52 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 00:25:55,865 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-2] Buscando escribanos habilitados para el registro 52 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 00:25:55,881 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-2] Se encontraron 1 escribanos habilitados para el registro 52 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 00:28:30,228 WARN c.z.h.p.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m35s767ms103µs199ns).
+2025-03-12 09:27:18,085 WARN c.z.h.p.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8h13m24s7ms710µs499ns).
+2025-03-12 10:19:35,015 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-5] Securing GET /api/escribanos/registro/52/habilitados?fecha=2019-02-02
+2025-03-12 10:19:35,427 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-5] Token validado para: api_client
+2025-03-12 10:19:35,435 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-5] Token JWT válido para el usuario: api_client
+2025-03-12 10:19:35,444 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-5] Secured GET /api/escribanos/registro/52/habilitados?fecha=2019-02-02
+2025-03-12 10:19:35,510 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-5] Consultando escribanos habilitados para el registro 52 en la fecha Sat Feb 02 00:00:00 ART 2019
+2025-03-12 10:19:35,520 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-5] Buscando escribanos habilitados para el registro 52 en la fecha Sat Feb 02 00:00:00 ART 2019
+2025-03-12 10:19:35,580 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-5] Se encontraron 0 escribanos habilitados para el registro 52 en la fecha Sat Feb 02 00:00:00 ART 2019
+2025-03-12 10:20:17,387 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-7] Securing GET /api/escribanos/1/supliendo?fecha=2025-02-25
+2025-03-12 10:20:17,410 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-7] Token validado para: api_client
+2025-03-12 10:20:17,415 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-7] Token JWT válido para el usuario: api_client
+2025-03-12 10:20:17,420 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-7] Secured GET /api/escribanos/1/supliendo?fecha=2025-02-25
+2025-03-12 10:20:17,454 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-7] Consultando a quiénes suple el escribano con matrícula 1 en la fecha Tue Feb 25 00:00:00 ART 2025
+2025-03-12 10:20:17,456 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-7] Verificando si el escribano con matrícula 1 es suplente de alguien en la fecha Tue Feb 25 00:00:00 ART 2025
+2025-03-12 10:20:17,469 WARN a.c.c.l.s.EscribanoService [http-nio-8080-exec-7] No se encontró el escribano con matrícula: 1
+2025-03-12 10:20:17,470 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-7] El escribano con matrícula 1 no está supliendo a nadie en la fecha Tue Feb 25 00:00:00 ART 2025
+2025-03-12 10:20:23,757 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-8] Securing GET /api/escribanos/100/suplente?fecha=2025-03-10
+2025-03-12 10:20:23,772 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-8] Token validado para: api_client
+2025-03-12 10:20:23,773 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-8] Token JWT válido para el usuario: api_client
+2025-03-12 10:20:23,781 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-8] Secured GET /api/escribanos/100/suplente?fecha=2025-03-10
+2025-03-12 10:20:23,787 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-8] Consultando suplente activo para la matrícula 100 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 10:20:23,789 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-8] Buscando suplente activo para la matrícula 100 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 10:20:23,801 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-8] Buscando suplente activo para el escribano 100 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 10:20:23,809 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-8] No se encontró suplente activo para la matrícula 100 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 10:22:14,026 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-1] Securing GET /api/escribanos/documento/25123456
+2025-03-12 10:22:14,040 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-1] Token validado para: api_client
+2025-03-12 10:22:14,043 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-1] Token JWT válido para el usuario: api_client
+2025-03-12 10:22:14,046 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-1] Secured GET /api/escribanos/documento/25123456
+2025-03-12 10:22:14,171 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-1] Consulta del escribano con documento: 25123456
+2025-03-12 10:22:14,174 DEBUG a.c.c.l.s.EscribanoService [http-nio-8080-exec-1] Buscando escribano por documento: 25123456
+2025-03-12 10:22:14,211 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-1] Escribano encontrado: Pérez, Juan
+2025-03-12 10:22:19,565 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-3] Securing GET /api/escribanos/1
+2025-03-12 10:22:19,578 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-3] Token validado para: api_client
+2025-03-12 10:22:19,579 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-3] Token JWT válido para el usuario: api_client
+2025-03-12 10:22:19,584 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-3] Secured GET /api/escribanos/1
+2025-03-12 10:22:19,588 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-3] Consulta del escribano con ID: 1
+2025-03-12 10:22:19,590 DEBUG a.c.c.l.s.EscribanoService [http-nio-8080-exec-3] Buscando escribano por ID: 1 y categoría = 1
+2025-03-12 10:22:19,600 WARN a.c.c.l.c.EscribanoController [http-nio-8080-exec-3] No se encontró el escribano con ID: 1
+2025-03-12 10:23:52,020 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-6] Securing POST /api/fojas/verificar
+2025-03-12 10:23:52,049 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-6] Token validado para: api_client
+2025-03-12 10:23:52,050 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-6] Token JWT válido para el usuario: api_client
+2025-03-12 10:23:52,052 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-6] Secured POST /api/fojas/verificar
+2025-03-12 10:23:52,103 INFO a.c.c.l.c.FojaController [http-nio-8080-exec-6] Recibida solicitud para verificar foja tipo: C, número: 12345, fecha: Mon Feb 24 21:00:00 ART 2025
+2025-03-12 10:23:52,111 INFO a.c.c.l.s.FojaService [http-nio-8080-exec-6] Verificando foja tipo: C, número: 12345, fecha: Mon Feb 24 21:00:00 ART 2025
+2025-03-12 10:26:31,553 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-7] Securing GET /api/facturas/cliente/100
+2025-03-12 10:26:31,586 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-7] Token validado para: api_client
+2025-03-12 10:26:31,590 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-7] Token JWT válido para el usuario: api_client
+2025-03-12 10:26:31,593 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-7] Secured GET /api/facturas/cliente/100
+2025-03-12 10:26:31,605 INFO a.c.c.l.c.FacturaController [http-nio-8080-exec-7] Consultando facturas para el cliente ID: 100
+2025-03-12 10:26:31,606 INFO a.c.c.l.s.FacturaService [http-nio-8080-exec-7] Buscando facturas para el cliente ID: 100
+2025-03-12 10:32:35,844 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-10] Securing GET /api/escribanos/200/suplente?fecha=2025-03-10
+2025-03-12 10:32:35,861 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-10] Token validado para: api_client
+2025-03-12 10:32:35,862 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-10] Token JWT válido para el usuario: api_client
+2025-03-12 10:32:35,864 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-10] Secured GET /api/escribanos/200/suplente?fecha=2025-03-10
+2025-03-12 10:32:35,868 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-10] Consultando suplente activo para la matrícula 200 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 10:32:35,872 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-10] Buscando suplente activo para la matrícula 200 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 10:32:35,877 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-10] Buscando suplente activo para el escribano 200 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 10:32:35,889 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-10] Se encontró un suplente (ID: 100) para la matrícula 200 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 10:33:11,501 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-1] Securing GET /api/escribanos/200/suplente?fecha=2025-03-15
+2025-03-12 10:33:11,514 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-1] Token validado para: api_client
+2025-03-12 10:33:11,515 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-1] Token JWT válido para el usuario: api_client
+2025-03-12 10:33:11,519 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-1] Secured GET /api/escribanos/200/suplente?fecha=2025-03-15
+2025-03-12 10:33:11,524 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-1] Consultando suplente activo para la matrícula 200 en la fecha Sat Mar 15 00:00:00 ART 2025
+2025-03-12 10:33:11,528 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-1] Buscando suplente activo para la matrícula 200 en la fecha Sat Mar 15 00:00:00 ART 2025
+2025-03-12 10:33:11,535 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-1] Buscando suplente activo para el escribano 200 en la fecha Sat Mar 15 00:00:00 ART 2025
+2025-03-12 10:33:11,545 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-1] No se encontró suplente activo para la matrícula 200 en la fecha Sat Mar 15 00:00:00 ART 2025
+2025-03-12 10:33:25,234 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-3] Securing GET /api/escribanos/200/suplente?fecha=2025-03-10
+2025-03-12 10:33:25,279 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-3] Token validado para: api_client
+2025-03-12 10:33:25,281 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-3] Token JWT válido para el usuario: api_client
+2025-03-12 10:33:25,285 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-3] Secured GET /api/escribanos/200/suplente?fecha=2025-03-10
+2025-03-12 10:33:25,290 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-3] Consultando suplente activo para la matrícula 200 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 10:33:25,297 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-3] Buscando suplente activo para la matrícula 200 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 10:33:25,304 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-3] Buscando suplente activo para el escribano 200 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 10:33:25,320 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-3] Se encontró un suplente (ID: 100) para la matrícula 200 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 10:38:10,919 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-6] Securing GET /api/escribanos/100/supliendo?fecha=2025-02-25
+2025-03-12 10:38:10,941 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-6] Token validado para: api_client
+2025-03-12 10:38:10,942 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-6] Token JWT válido para el usuario: api_client
+2025-03-12 10:38:10,946 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-6] Secured GET /api/escribanos/100/supliendo?fecha=2025-02-25
+2025-03-12 10:38:10,952 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-6] Consultando a quiénes suple el escribano con matrícula 100 en la fecha Tue Feb 25 00:00:00 ART 2025
+2025-03-12 10:38:10,955 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-6] Verificando si el escribano con matrícula 100 es suplente de alguien en la fecha Tue Feb 25 00:00:00 ART 2025
+2025-03-12 10:38:10,961 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-6] Verificando si el escribano 100 es suplente de alguien en la fecha Tue Feb 25 00:00:00 ART 2025
+2025-03-12 10:38:10,969 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-6] El escribano 100 no es suplente de nadie en la fecha Tue Feb 25 00:00:00 ART 2025
+2025-03-12 10:38:10,971 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-6] El escribano con matrícula 100 no está supliendo a nadie en la fecha Tue Feb 25 00:00:00 ART 2025
+2025-03-12 10:42:14,767 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-8] Securing GET /api/escribanos/registro/52/habilitados?fecha=2019-02-02
+2025-03-12 10:42:14,785 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-8] Token validado para: api_client
+2025-03-12 10:42:14,787 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-8] Token JWT válido para el usuario: api_client
+2025-03-12 10:42:14,790 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-8] Secured GET /api/escribanos/registro/52/habilitados?fecha=2019-02-02
+2025-03-12 10:42:14,793 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-8] Consultando escribanos habilitados para el registro 52 en la fecha Sat Feb 02 00:00:00 ART 2019
+2025-03-12 10:42:14,795 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-8] Buscando escribanos habilitados para el registro 52 en la fecha Sat Feb 02 00:00:00 ART 2019
+2025-03-12 10:42:14,808 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-8] Se encontraron 0 escribanos habilitados para el registro 52 en la fecha Sat Feb 02 00:00:00 ART 2019
+2025-03-12 10:42:24,445 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-9] Securing GET /api/escribanos/200/suplente?fecha=2025-03-15
+2025-03-12 10:42:24,462 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-9] Token validado para: api_client
+2025-03-12 10:42:24,464 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-9] Token JWT válido para el usuario: api_client
+2025-03-12 10:42:24,467 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-9] Secured GET /api/escribanos/200/suplente?fecha=2025-03-15
+2025-03-12 10:42:24,471 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-9] Consultando suplente activo para la matrícula 200 en la fecha Sat Mar 15 00:00:00 ART 2025
+2025-03-12 10:42:24,473 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-9] Buscando suplente activo para la matrícula 200 en la fecha Sat Mar 15 00:00:00 ART 2025
+2025-03-12 10:42:24,480 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-9] Buscando suplente activo para el escribano 200 en la fecha Sat Mar 15 00:00:00 ART 2025
+2025-03-12 10:42:24,492 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-9] No se encontró suplente activo para la matrícula 200 en la fecha Sat Mar 15 00:00:00 ART 2025
+2025-03-12 10:53:10,307 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-3] Securing GET /api/escribanos/200/suplente?fecha=2025-03-10
+2025-03-12 10:53:10,324 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-3] Token validado para: api_client
+2025-03-12 10:53:10,325 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-3] Token JWT válido para el usuario: api_client
+2025-03-12 10:53:10,330 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-3] Secured GET /api/escribanos/200/suplente?fecha=2025-03-10
+2025-03-12 10:53:10,335 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-3] Consultando suplente activo para la matrícula 200 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 10:53:10,337 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-3] Buscando suplente activo para la matrícula 200 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 10:53:10,345 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-3] Buscando suplente activo para el escribano 200 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 10:53:10,353 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-3] Se encontró un suplente (ID: 100) para la matrícula 200 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 11:07:07,920 INFO o.s.b.StartupInfoLogger [main] Starting LegalizacionDigitalApplication using Java 21.0.6 with PID 6792 (C:\Users\Hector\Documents\Desarrollo\legalizacion-digital\target\classes started by Hector in C:\Users\Hector\Documents\Desarrollo\legalizacion-digital)
+2025-03-12 11:07:07,926 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-03-12 11:07:07,928 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-03-12 11:07:10,011 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-12 11:07:10,204 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 174 ms. Found 6 JPA repository interfaces.
+2025-03-12 11:07:11,656 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2025-03-12 11:07:11,672 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-12 11:07:11,680 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2025-03-12 11:07:11,688 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-03-12 11:07:11,857 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2025-03-12 11:07:11,860 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3816 ms
+2025-03-12 11:07:12,236 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-12 11:07:12,410 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-03-12 11:07:12,510 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-03-12 11:07:13,017 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-12 11:07:13,097 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-03-12 11:07:13,501 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@cd5ff55
+2025-03-12 11:07:13,505 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-03-12 11:07:13,605 WARN o.h.d.Dialect [main] HHH000511: The 5.5.22 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2025-03-12 11:07:13,627 WARN o.h.e.j.d.i.DialectFactoryImpl [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-12 11:07:15,635 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-12 11:07:15,641 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-12 11:07:16,760 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-12 11:07:18,152 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-12 11:07:18,762 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@835718b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e6dc94c, org.springframework.security.web.context.SecurityContextHolderFilter@23e0ef68, org.springframework.security.web.header.HeaderWriterFilter@3c2b7322, org.springframework.web.filter.CorsFilter@6c39ba30, org.springframework.security.web.authentication.logout.LogoutFilter@7334dcbe, ar.com.cnpmweb.legalizaciondigital.security.JwtAuthorizationFilter@f2df380, ar.com.cnpmweb.legalizaciondigital.security.JwtAuthenticationFilter@2c3762c7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@27449f65, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3b4a77be, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6cd0f9a4, org.springframework.security.web.session.SessionManagementFilter@43c25e89, org.springframework.security.web.access.ExceptionTranslationFilter@5ac3c6cd, org.springframework.security.web.access.intercept.AuthorizationFilter@35427786]
+2025-03-12 11:07:19,431 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2025-03-12 11:07:19,535 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8080 (http) with context path ''
+2025-03-12 11:07:19,580 INFO o.s.b.StartupInfoLogger [main] Started LegalizacionDigitalApplication in 12.774 seconds (process running for 13.645)
+2025-03-12 11:07:41,555 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-3] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-12 11:07:41,562 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-3] Initializing Servlet 'dispatcherServlet'
+2025-03-12 11:07:41,574 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-3] Completed initialization in 3 ms
+2025-03-12 11:07:41,639 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-3] Securing GET /api/escribanos/200/suplente?fecha=2025-03-10
+2025-03-12 11:07:41,674 WARN o.s.w.s.h.HandlerMappingIntrospector$CacheResultLogHelper [http-nio-8080-exec-3] Cache miss for REQUEST dispatch to '/api/escribanos/200/suplente' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2025-03-12 11:07:42,930 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-3] Token validado para: api_client
+2025-03-12 11:07:42,932 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-3] Token JWT válido para el usuario: api_client
+2025-03-12 11:07:42,940 WARN o.s.w.s.h.HandlerMappingIntrospector$CacheResultLogHelper [http-nio-8080-exec-3] Cache miss for REQUEST dispatch to '/api/escribanos/200/suplente' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2025-03-12 11:07:42,952 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-3] Secured GET /api/escribanos/200/suplente?fecha=2025-03-10
+2025-03-12 11:07:43,063 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-3] Consultando suplente activo para la matrícula 200 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 11:07:43,067 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-3] Buscando suplente activo para la matrícula 200 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 11:07:43,125 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-3] Buscando suplente activo para el escribano 200 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 11:07:43,173 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-3] Se encontró un suplente (ID: 100) para la matrícula 200 en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 11:07:49,520 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-4] Securing GET /api/escribanos/200/suplente?fecha=2025-03-15
+2025-03-12 11:07:49,549 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-4] Token validado para: api_client
+2025-03-12 11:07:49,564 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-4] Token JWT válido para el usuario: api_client
+2025-03-12 11:07:49,572 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-4] Secured GET /api/escribanos/200/suplente?fecha=2025-03-15
+2025-03-12 11:07:49,626 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-4] Consultando suplente activo para la matrícula 200 en la fecha Sat Mar 15 00:00:00 ART 2025
+2025-03-12 11:07:49,654 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-4] Buscando suplente activo para la matrícula 200 en la fecha Sat Mar 15 00:00:00 ART 2025
+2025-03-12 11:07:49,699 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-4] Buscando suplente activo para el escribano 200 en la fecha Sat Mar 15 00:00:00 ART 2025
+2025-03-12 11:07:49,753 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-4] No se encontró suplente activo para la matrícula 200 en la fecha Sat Mar 15 00:00:00 ART 2025
+2025-03-12 11:12:55,197 INFO o.s.b.StartupInfoLogger [main] Starting LegalizacionDigitalApplication using Java 21.0.6 with PID 23824 (C:\Users\Hector\Documents\Desarrollo\legalizacion-digital\target\classes started by Hector in C:\Users\Hector\Documents\Desarrollo\legalizacion-digital)
+2025-03-12 11:12:55,208 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-03-12 11:12:55,217 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-03-12 11:12:59,316 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-12 11:13:00,257 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 631 ms. Found 6 JPA repository interfaces.
+2025-03-12 11:13:04,061 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2025-03-12 11:13:04,082 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-12 11:13:04,089 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2025-03-12 11:13:04,090 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-03-12 11:13:04,345 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2025-03-12 11:13:04,389 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 8920 ms
+2025-03-12 11:13:05,723 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-12 11:13:06,153 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-03-12 11:13:06,279 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-03-12 11:13:07,021 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-12 11:13:07,134 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-03-12 11:13:07,538 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d64a960
+2025-03-12 11:13:07,543 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-03-12 11:13:07,647 WARN o.h.d.Dialect [main] HHH000511: The 5.5.22 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2025-03-12 11:13:07,663 WARN o.h.e.j.d.i.DialectFactoryImpl [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-12 11:13:11,004 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-12 11:13:11,014 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-12 11:13:12,705 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-12 11:13:15,046 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-12 11:13:17,505 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3c9e82a6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4235e01b, org.springframework.security.web.context.SecurityContextHolderFilter@b0bd567, org.springframework.security.web.header.HeaderWriterFilter@18a9762, org.springframework.web.filter.CorsFilter@4ed096cc, org.springframework.security.web.authentication.logout.LogoutFilter@588b2d7a, ar.com.cnpmweb.legalizaciondigital.security.JwtAuthorizationFilter@b24e21f, ar.com.cnpmweb.legalizaciondigital.security.JwtAuthenticationFilter@43e7ca6f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@248227db, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@fb69ab1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2e3fdf30, org.springframework.security.web.session.SessionManagementFilter@147c00c7, org.springframework.security.web.access.ExceptionTranslationFilter@3e6b08d4, org.springframework.security.web.access.intercept.AuthorizationFilter@54d5500e]
+2025-03-12 11:13:18,361 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2025-03-12 11:13:18,484 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8080 (http) with context path ''
+2025-03-12 11:13:18,527 INFO o.s.b.StartupInfoLogger [main] Started LegalizacionDigitalApplication in 25.626 seconds (process running for 27.083)
+2025-03-12 11:26:01,285 INFO o.s.b.StartupInfoLogger [main] Starting LegalizacionDigitalApplication using Java 21.0.6 with PID 14416 (C:\Users\Hector\Documents\Desarrollo\legalizacion-digital\target\classes started by Hector in C:\Users\Hector\Documents\Desarrollo\legalizacion-digital)
+2025-03-12 11:26:01,309 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-03-12 11:26:01,368 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-03-12 11:26:21,056 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-12 11:26:23,463 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 1646 ms. Found 6 JPA repository interfaces.
+2025-03-12 11:26:37,058 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2025-03-12 11:26:37,161 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-12 11:26:37,206 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2025-03-12 11:26:37,210 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-03-12 11:26:37,859 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2025-03-12 11:26:37,880 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 36236 ms
+2025-03-12 11:26:41,813 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-12 11:26:42,409 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-03-12 11:26:42,731 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-03-12 11:28:46,544 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-12 11:28:47,574 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-03-12 11:28:49,727 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d64a960
+2025-03-12 11:28:49,950 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-03-12 11:28:50,555 WARN o.h.d.Dialect [main] HHH000511: The 5.5.22 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2025-03-12 11:28:50,806 WARN o.h.e.j.d.i.DialectFactoryImpl [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-12 11:28:59,183 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-12 11:28:59,436 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-12 11:29:02,645 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-12 11:29:08,099 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-12 11:29:09,359 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@54d5500e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d1a706, org.springframework.security.web.context.SecurityContextHolderFilter@147c00c7, org.springframework.security.web.header.HeaderWriterFilter@3a5922ec, org.springframework.web.filter.CorsFilter@5e136445, org.springframework.security.web.authentication.logout.LogoutFilter@12e5f7cb, ar.com.cnpmweb.legalizaciondigital.security.JwtAuthorizationFilter@3c9e82a6, ar.com.cnpmweb.legalizaciondigital.security.JwtAuthenticationFilter@4235e01b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@45add64c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@b0bd567, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4ed096cc, org.springframework.security.web.session.SessionManagementFilter@40f88929, org.springframework.security.web.access.ExceptionTranslationFilter@4377b35b, org.springframework.security.web.access.intercept.AuthorizationFilter@7334dcbe]
+2025-03-12 11:29:10,544 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2025-03-12 11:29:10,686 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8080 (http) with context path ''
+2025-03-12 11:29:10,717 INFO o.s.b.StartupInfoLogger [main] Started LegalizacionDigitalApplication in 191.258 seconds (process running for 199.826)
+2025-03-12 11:56:03,635 INFO o.s.b.StartupInfoLogger [main] Starting LegalizacionDigitalApplication using Java 21.0.6 with PID 236 (C:\Users\Hector\Documents\Desarrollo\legalizacion-digital\target\classes started by Hector in C:\Users\Hector\Documents\Desarrollo\legalizacion-digital)
+2025-03-12 11:56:03,641 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-03-12 11:56:03,644 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-03-12 11:56:05,437 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-12 11:56:05,745 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 255 ms. Found 6 JPA repository interfaces.
+2025-03-12 11:56:08,725 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2025-03-12 11:56:08,768 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-12 11:56:08,777 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2025-03-12 11:56:08,778 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-03-12 11:56:08,993 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2025-03-12 11:56:08,996 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 5233 ms
+2025-03-12 11:56:09,397 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-12 11:56:09,587 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-03-12 11:56:09,670 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-03-12 11:56:10,211 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-12 11:56:10,336 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-03-12 11:56:10,825 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5353dd09
+2025-03-12 11:56:10,828 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-03-12 11:56:10,905 WARN o.h.d.Dialect [main] HHH000511: The 5.5.22 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2025-03-12 11:56:10,913 WARN o.h.e.j.d.i.DialectFactoryImpl [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-12 11:56:12,667 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-12 11:56:12,673 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-12 11:56:13,656 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-12 11:56:14,825 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-12 11:56:15,604 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@36d1ac55, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3da76d3a, org.springframework.security.web.context.SecurityContextHolderFilter@27b89e0a, org.springframework.security.web.header.HeaderWriterFilter@6d398593, org.springframework.web.filter.CorsFilter@167da81d, org.springframework.security.web.authentication.logout.LogoutFilter@53628ff6, ar.com.cnpmweb.legalizaciondigital.security.JwtAuthorizationFilter@24c6a471, ar.com.cnpmweb.legalizaciondigital.security.JwtAuthenticationFilter@1fce17b8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6eed5b68, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4377b35b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@190677c6, org.springframework.security.web.session.SessionManagementFilter@53e6c017, org.springframework.security.web.access.ExceptionTranslationFilter@74534564, org.springframework.security.web.access.intercept.AuthorizationFilter@656dc20f]
+2025-03-12 11:56:16,321 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2025-03-12 11:56:16,399 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8080 (http) with context path ''
+2025-03-12 11:56:16,422 INFO o.s.b.StartupInfoLogger [main] Started LegalizacionDigitalApplication in 13.907 seconds (process running for 14.628)
+2025-03-12 11:56:25,882 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-3] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-12 11:56:25,888 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-3] Initializing Servlet 'dispatcherServlet'
+2025-03-12 11:56:25,892 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-3] Completed initialization in 3 ms
+2025-03-12 11:56:25,950 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-3] Securing GET /api/escribanos/1/habilitado-fecha?fecha=2025-02-25
+2025-03-12 11:56:25,991 WARN o.s.w.s.h.HandlerMappingIntrospector$CacheResultLogHelper [http-nio-8080-exec-3] Cache miss for REQUEST dispatch to '/api/escribanos/1/habilitado-fecha' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2025-03-12 11:56:26,491 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-3] Token validado para: api_client
+2025-03-12 11:56:26,492 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-3] Token JWT válido para el usuario: api_client
+2025-03-12 11:56:26,499 WARN o.s.w.s.h.HandlerMappingIntrospector$CacheResultLogHelper [http-nio-8080-exec-3] Cache miss for REQUEST dispatch to '/api/escribanos/1/habilitado-fecha' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2025-03-12 11:56:26,504 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-3] Secured GET /api/escribanos/1/habilitado-fecha?fecha=2025-02-25
+2025-03-12 11:56:26,571 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-3] Verificando si la matrícula 1 estaba habilitada en la fecha Tue Feb 25 00:00:00 ART 2025
+2025-03-12 11:56:26,573 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-3] Verificando si la matrícula 1 estaba habilitada en la fecha Tue Feb 25 00:00:00 ART 2025
+2025-03-12 11:56:26,606 WARN a.c.c.l.s.EscribanoService [http-nio-8080-exec-3] No se encontró el escribano con ID: 1
+2025-03-12 11:56:35,009 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-4] Securing GET /api/escribanos/100/habilitado-fecha?fecha=2025-02-25
+2025-03-12 11:56:35,021 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-4] Token validado para: api_client
+2025-03-12 11:56:35,023 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-4] Token JWT válido para el usuario: api_client
+2025-03-12 11:56:35,026 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-4] Secured GET /api/escribanos/100/habilitado-fecha?fecha=2025-02-25
+2025-03-12 11:56:35,036 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-4] Verificando si la matrícula 100 estaba habilitada en la fecha Tue Feb 25 00:00:00 ART 2025
+2025-03-12 11:56:35,037 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-4] Verificando si la matrícula 100 estaba habilitada en la fecha Tue Feb 25 00:00:00 ART 2025
+2025-03-12 11:56:35,086 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-4] Matrícula 100 en fecha Tue Feb 25 00:00:00 ART 2025: INHABILITADO
+2025-03-12 11:56:51,845 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-5] Securing GET /api/escribanos/200/habilitado-fecha?fecha=2025-02-25
+2025-03-12 11:56:51,857 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-5] Token validado para: api_client
+2025-03-12 11:56:51,858 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-5] Token JWT válido para el usuario: api_client
+2025-03-12 11:56:51,862 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-5] Secured GET /api/escribanos/200/habilitado-fecha?fecha=2025-02-25
+2025-03-12 11:56:51,871 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-5] Verificando si la matrícula 200 estaba habilitada en la fecha Tue Feb 25 00:00:00 ART 2025
+2025-03-12 11:56:51,876 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-5] Verificando si la matrícula 200 estaba habilitada en la fecha Tue Feb 25 00:00:00 ART 2025
+2025-03-12 11:56:51,913 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-5] Matrícula 200 en fecha Tue Feb 25 00:00:00 ART 2025: HABILITADO
+2025-03-12 11:57:05,968 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-6] Securing GET /api/escribanos/200/habilitado-fecha?fecha=2025-02-10
+2025-03-12 11:57:05,977 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-6] Token validado para: api_client
+2025-03-12 11:57:05,979 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-6] Token JWT válido para el usuario: api_client
+2025-03-12 11:57:05,981 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-6] Secured GET /api/escribanos/200/habilitado-fecha?fecha=2025-02-10
+2025-03-12 11:57:05,989 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-6] Verificando si la matrícula 200 estaba habilitada en la fecha Mon Feb 10 00:00:00 ART 2025
+2025-03-12 11:57:05,993 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-6] Verificando si la matrícula 200 estaba habilitada en la fecha Mon Feb 10 00:00:00 ART 2025
+2025-03-12 11:57:06,005 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-6] Matrícula 200 en fecha Mon Feb 10 00:00:00 ART 2025: HABILITADO
+2025-03-12 11:57:08,317 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-7] Securing GET /api/escribanos/200/habilitado-fecha?fecha=2025-02-10
+2025-03-12 11:57:08,327 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-7] Token validado para: api_client
+2025-03-12 11:57:08,328 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-7] Token JWT válido para el usuario: api_client
+2025-03-12 11:57:08,330 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-7] Secured GET /api/escribanos/200/habilitado-fecha?fecha=2025-02-10
+2025-03-12 11:57:08,336 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-7] Verificando si la matrícula 200 estaba habilitada en la fecha Mon Feb 10 00:00:00 ART 2025
+2025-03-12 11:57:08,340 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-7] Verificando si la matrícula 200 estaba habilitada en la fecha Mon Feb 10 00:00:00 ART 2025
+2025-03-12 11:57:08,348 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-7] Matrícula 200 en fecha Mon Feb 10 00:00:00 ART 2025: HABILITADO
+2025-03-12 11:57:21,493 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-8] Securing GET /api/escribanos/200/habilitado-fecha?fecha=2025-03-10
+2025-03-12 11:57:21,510 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-8] Token validado para: api_client
+2025-03-12 11:57:21,511 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-8] Token JWT válido para el usuario: api_client
+2025-03-12 11:57:21,516 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-8] Secured GET /api/escribanos/200/habilitado-fecha?fecha=2025-03-10
+2025-03-12 11:57:21,522 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-8] Verificando si la matrícula 200 estaba habilitada en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 11:57:21,526 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-8] Verificando si la matrícula 200 estaba habilitada en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 11:57:21,538 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-8] Matrícula 200 en fecha Mon Mar 10 00:00:00 ART 2025: HABILITADO
+2025-03-12 11:58:42,319 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-1] Securing GET /api/escribanos/200/habilitado-fecha?fecha=2025-03-10
+2025-03-12 11:58:42,332 DEBUG a.c.c.l.s.ApiKeyService [http-nio-8080-exec-1] Token validado para: api_client
+2025-03-12 11:58:42,333 DEBUG a.c.c.l.s.JwtAuthorizationFilter [http-nio-8080-exec-1] Token JWT válido para el usuario: api_client
+2025-03-12 11:58:42,335 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-1] Secured GET /api/escribanos/200/habilitado-fecha?fecha=2025-03-10
+2025-03-12 11:58:42,338 INFO a.c.c.l.c.EscribanoController [http-nio-8080-exec-1] Verificando si la matrícula 200 estaba habilitada en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 11:58:42,340 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-1] Verificando si la matrícula 200 estaba habilitada en la fecha Mon Mar 10 00:00:00 ART 2025
+2025-03-12 11:58:42,353 INFO a.c.c.l.s.EscribanoService [http-nio-8080-exec-1] Matrícula 200 en fecha Mon Mar 10 00:00:00 ART 2025: HABILITADO
+2025-03-12 12:57:40,665 INFO o.s.b.StartupInfoLogger [main] Starting LegalizacionDigitalApplication using Java 21.0.6 with PID 11072 (C:\Users\Hector\Documents\Desarrollo\legalizacion-digital\target\classes started by Hector in C:\Users\Hector\Documents\Desarrollo\legalizacion-digital)
+2025-03-12 12:57:40,675 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-03-12 12:57:40,712 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-03-12 12:57:43,337 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-12 12:57:43,575 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 197 ms. Found 6 JPA repository interfaces.
+2025-03-12 12:57:45,208 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2025-03-12 12:57:45,233 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-12 12:57:45,250 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2025-03-12 12:57:45,255 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-03-12 12:57:45,416 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2025-03-12 12:57:45,418 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 4558 ms
+2025-03-12 12:57:45,799 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-12 12:57:45,965 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-03-12 12:57:46,035 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-03-12 12:57:46,480 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-12 12:57:46,536 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-03-12 12:57:46,817 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@53ba1175
+2025-03-12 12:57:46,824 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-03-12 12:57:46,909 WARN o.h.d.Dialect [main] HHH000511: The 5.5.22 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2025-03-12 12:57:46,918 WARN o.h.e.j.d.i.DialectFactoryImpl [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-12 12:57:48,969 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-12 12:57:48,974 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-12 12:57:50,339 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-12 12:57:51,664 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-12 12:57:52,232 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@35427786, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6554f841, org.springframework.security.web.context.SecurityContextHolderFilter@43c25e89, org.springframework.security.web.header.HeaderWriterFilter@fb69ab1, org.springframework.web.filter.CorsFilter@1bef1304, org.springframework.security.web.authentication.logout.LogoutFilter@1fce17b8, ar.com.cnpmweb.legalizaciondigital.security.JwtAuthorizationFilter@835718b, ar.com.cnpmweb.legalizaciondigital.security.JwtAuthenticationFilter@2e6dc94c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3c2406dd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@23e0ef68, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6c39ba30, org.springframework.security.web.session.SessionManagementFilter@9223122, org.springframework.security.web.access.ExceptionTranslationFilter@7f8586f9, org.springframework.security.web.access.intercept.AuthorizationFilter@2e3fdf30]
+2025-03-12 12:57:52,613 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2025-03-12 12:57:52,679 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8080 (http) with context path ''
+2025-03-12 12:57:52,701 INFO o.s.b.StartupInfoLogger [main] Started LegalizacionDigitalApplication in 13.993 seconds (process running for 14.943)
