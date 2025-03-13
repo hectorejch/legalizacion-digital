@@ -346,10 +346,10 @@ public class EscribanoService {
                 // Si es una licencia con suplente, excluir al escribano suplido
                 if (antecedente.getNovIdCodigo().equals(TipoNovedad.LICENCIA.getCodigo())) {
                     Integer cliSuplente = antecedente.getCliSuplente();
+                    // Añadir el escribano suplido a la lista de excluidos
+                    escribanosExcluidos.add(antecedente.getCliId().longValue());
+                    
                     if (cliSuplente != null && cliSuplente > 0) {
-                        // Añadir el escribano suplido a la lista de excluidos
-                        escribanosExcluidos.add(antecedente.getCliId().longValue());
-
                         // Buscar y añadir al suplente a la lista de habilitados
                         Optional<Escribano> suplenteOpt = escribanoRepository
                                 .findEscribanoById(cliSuplente.longValue());
