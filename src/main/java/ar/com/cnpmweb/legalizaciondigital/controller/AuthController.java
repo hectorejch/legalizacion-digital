@@ -34,13 +34,14 @@ public class AuthController {
         
         if (result.isAutenticado()) {
             // El usuario existe y la contraseña coincide
-            if (result.isHabilitado()) {
+/*             if (result.isHabilitado()) {
                 // Está habilitado
                 response.setCodigo("1");
             } else {
                 // No está habilitado
                 response.setCodigo("2");
-            }
+            } */
+            response.setCodigo(result.getCodigo());
             response.setMensaje(result.getMensaje());
             response.setMatricula(result.getMatricula());
 

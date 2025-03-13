@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
@@ -53,7 +54,26 @@ public class EscribanoService {
                 .collect(Collectors.toList());
     }
 
+    /**
+     * Verifica si un escribano estaba habilitado en una fecha específica,
+     * controlando antecedentes habilitantes e inhabilites, y licencias activas.
+     * Códigos que puede retornar:
+     * - MATRICULA_NO_ENCONTRADA
+     * - MATRICULA_VALIDA
+     * - MATRICULA_NO_HABILITADA
+     * - ESCRIBANO_EN_LICENCIA
+     */
     public MatriculaHabilitadaDTO verificarMatriculaHabilitadaEnFecha(Long cliId, Date fecha) {
+        
+        // Normalizo la fecha ingresada para fijar la hora en 00:00:00
+        // de lo contrario tengo problemas al comparar con las fechas de inicio y fin
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(fecha);
+        calendar.set(Calendar.HOUR_OF_DAY, 0);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        calendar.set(Calendar.MILLISECOND, 0);
+        fecha = calendar.getTime();
         logger.info("Verificando si la matrícula {} estaba habilitada en la fecha {}", cliId, fecha);
 
         MatriculaHabilitadaDTO resultado = new MatriculaHabilitadaDTO();
@@ -70,17 +90,20 @@ public class EscribanoService {
         Escribano escribano = escribanoOpt.get();
 
         // Buscamos el antecedente habilitante para la fecha dada
+        // Tiene que ser un autorizante activo en esa fecha
         Antecedente antecedenteHabilitante = encontrarAntecedenteHabilitanteEnFecha(escribano, fecha);
 
-        // Verificar si estaba habilitado por tener un antecedente activo en esa fecha
-        boolean estabaHabilitado = verificarAntecedentesHabilitantesEnFecha(escribano, fecha);
+        // verificarAntecedentesHabilitantesEnFecha hace lo mismo que encontrarAntecedentesHabilitantesEnFecha
+        // pero devuelve un booleano en lugar de un objeto Antecedente
+        // boolean estabaHabilitado = verificarAntecedentesHabilitantesEnFecha(escribano, fecha);
+        boolean estabaHabilitado = antecedenteHabilitante != null;
 
         // Verificar si estaba inhabilitado por tener sanciones éticas vigentes en esa
         // fecha
         boolean estabaInhabilitado = verificarAntecedentesInhabilitantesEnFecha(escribano, fecha);
 
-         // Verificar si el escribano tiene una licencia activa en la fecha indicada
-         boolean tieneLicenciaActiva = verificarLicenciaActivaEnFecha(escribano, fecha);
+        // Verificar si el escribano tiene una licencia activa en la fecha indicada
+        boolean tieneLicenciaActiva = verificarLicenciaActivaEnFecha(escribano, fecha);
 
         // El escribano estaba habilitado solo si tenía antecedentes habilitantes y no
         // tenía inhabilitaciones
@@ -96,7 +119,7 @@ public class EscribanoService {
                 // Agregar la información del número de registro y carácter
                 if (antecedenteHabilitante != null) {
                     resultado.setNumRegistro(antecedenteHabilitante.getNumRegistro());
-                    
+
                     // Obtener la descripción del carácter en lugar del código
                     CaracterEscribano caracter = antecedenteHabilitante.getCaracter();
                     resultado.setCaracter(caracter != null ? caracter.getDescripcion() : null);
@@ -119,7 +142,7 @@ public class EscribanoService {
             if (novIdCodigo != null && novIdCodigo.equals(TipoNovedad.LICENCIA.getCodigo())) {
                 Date fechaAlta = antecedente.getFechaAlta();
                 Date fechaBaja = antecedente.getFechaBaja();
-
+                
                 // Verificar si la fecha está dentro del rango
                 if (fechaEstaDentroDeRango(fecha, fechaAlta, fechaBaja)) {
                     return true;
@@ -390,7 +413,6 @@ public class EscribanoService {
             // Utilizamos compareTo para incluir el caso de igualdad
             return fecha.compareTo(fechaInicio) >= 0;
         }
-
         // Verificar si la fecha está entre fechaInicio y fechaFin (inclusive)
         // fecha >= fechaInicio && fecha <= fechaFin
         return fecha.compareTo(fechaInicio) >= 0 && fecha.compareTo(fechaFin) <= 0;

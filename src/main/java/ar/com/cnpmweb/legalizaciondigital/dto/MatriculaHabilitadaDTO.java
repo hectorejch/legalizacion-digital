@@ -1,7 +1,6 @@
 package ar.com.cnpmweb.legalizaciondigital.dto;
 
 public class MatriculaHabilitadaDTO {
-    private boolean valido;
     private String codigo;
     private String mensaje;
     private Integer numRegistro;
@@ -12,21 +11,12 @@ public class MatriculaHabilitadaDTO {
     }
 
     // Constructor con parámetros
-    public MatriculaHabilitadaDTO(boolean valido, String codigo, String mensaje) {
-        this.valido = valido;
+    public MatriculaHabilitadaDTO(String codigo, String mensaje) {
         this.codigo = codigo;
         this.mensaje = mensaje;
     }
 
     // Getters y Setters
-
-    public boolean isValido() {
-        return valido;
-    }
-
-    public void setValido(boolean valido) {
-        this.valido = valido;
-    }
 
     public String getCodigo() {
         return codigo;
