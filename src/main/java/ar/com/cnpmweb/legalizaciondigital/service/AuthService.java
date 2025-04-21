@@ -32,6 +32,9 @@ public class AuthService {
         AuthResult result = new AuthResult();
 
         Usuario foundUser = usuarioRepository.findByUsuario(usuario);
+        logger.debug("Usuario encontrado: {}", foundUser.getId());
+        //logger.debug("Usuario: {}", foundUser.getUsuario());
+        //logger.debug("Contraseña: {}", foundUser.getContrasena());
 
         if (foundUser == null || !foundUser.getContrasena().equals(contrasenaMD5)) {
             logger.debug("Credenciales inválidas para el usuario: {}", usuario);

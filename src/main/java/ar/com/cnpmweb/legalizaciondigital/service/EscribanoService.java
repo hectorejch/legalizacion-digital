@@ -64,7 +64,7 @@ public class EscribanoService {
      * - ESCRIBANO_EN_LICENCIA
      */
     public MatriculaHabilitadaDTO verificarMatriculaHabilitadaEnFecha(Long cliId, Date fecha) {
-        
+
         // Normalizo la fecha ingresada para fijar la hora en 00:00:00
         // de lo contrario tengo problemas al comparar con las fechas de inicio y fin
         Calendar calendar = Calendar.getInstance();
@@ -93,9 +93,11 @@ public class EscribanoService {
         // Tiene que ser un autorizante activo en esa fecha
         Antecedente antecedenteHabilitante = encontrarAntecedenteHabilitanteEnFecha(escribano, fecha);
 
-        // verificarAntecedentesHabilitantesEnFecha hace lo mismo que encontrarAntecedentesHabilitantesEnFecha
+        // verificarAntecedentesHabilitantesEnFecha hace lo mismo que
+        // encontrarAntecedentesHabilitantesEnFecha
         // pero devuelve un booleano en lugar de un objeto Antecedente
-        // boolean estabaHabilitado = verificarAntecedentesHabilitantesEnFecha(escribano, fecha);
+        // boolean estabaHabilitado =
+        // verificarAntecedentesHabilitantesEnFecha(escribano, fecha);
         boolean estabaHabilitado = antecedenteHabilitante != null;
 
         // Verificar si estaba inhabilitado por tener sanciones éticas vigentes en esa
@@ -142,7 +144,7 @@ public class EscribanoService {
             if (novIdCodigo != null && novIdCodigo.equals(TipoNovedad.LICENCIA.getCodigo())) {
                 Date fechaAlta = antecedente.getFechaAlta();
                 Date fechaBaja = antecedente.getFechaBaja();
-                
+
                 // Verificar si la fecha está dentro del rango
                 if (fechaEstaDentroDeRango(fecha, fechaAlta, fechaBaja)) {
                     return true;
@@ -348,19 +350,26 @@ public class EscribanoService {
                     Integer cliSuplente = antecedente.getCliSuplente();
                     // Añadir el escribano suplido a la lista de excluidos
                     escribanosExcluidos.add(antecedente.getCliId().longValue());
-                    
+
                     if (cliSuplente != null && cliSuplente > 0) {
                         // Buscar y añadir al suplente a la lista de habilitados
                         Optional<Escribano> suplenteOpt = escribanoRepository
                                 .findEscribanoById(cliSuplente.longValue());
                         if (suplenteOpt.isPresent()) {
                             Escribano suplente = suplenteOpt.get();
-                            EscribanoHabilitadoDTO dto = new EscribanoHabilitadoDTO();
-                            dto.setMatricula(cliSuplente.longValue());
-                            dto.setNombre(suplente.getNombre());
-                            dto.setApellido(suplente.getApellido());
 
-                            mapaPorId.put(dto.getMatricula(), dto);
+                            // Verificar que el suplente no tenga suspensión activa ni licencia activa
+                            boolean tieneSuspension = verificarAntecedentesInhabilitantesEnFecha(suplente, fecha);
+                            boolean tieneLicencia = verificarLicenciaActivaEnFecha(suplente, fecha);
+
+                            if (!tieneSuspension && !tieneLicencia) {
+                                EscribanoHabilitadoDTO dto = new EscribanoHabilitadoDTO();
+                                dto.setMatricula(cliSuplente.longValue());
+                                dto.setNombre(suplente.getNombre());
+                                dto.setApellido(suplente.getApellido());
+
+                                mapaPorId.put(dto.getMatricula(), dto);
+                            }
                         }
                     }
                 }

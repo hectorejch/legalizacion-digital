@@ -11,8 +11,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -31,15 +35,19 @@ public class FojaService {
      * Verifica una foja y busca los escribanos habilitados para firmarla.
      */
     public VerificarFojaResponse verificarFoja(VerificarFojaRequest request) {
-        logger.info("Verificando foja tipo: {}, número: {}, fecha: {}",
-                request.getTipoFoja(), request.getNumeroFoja(), request.getFechaActuacion());
+        // Normalizo la fecha de actuación para que sea a las 00:00:00
+        // de lo contrario me resta 3 horas por el huso horario y me cambia de día
+        Date fechaNormalizada = normalizarFecha(request.getFechaActuacion());
+
+        logger.info("Verificando foja tipo: {}, numero: {}, fecha: {}",
+                request.getTipoFoja(), request.getNumeroFoja(), fechaNormalizada);
 
         VerificarFojaResponse response = new VerificarFojaResponse();
 
         // Establecer los datos originales en la respuesta
         response.setTipoFoja(request.getTipoFoja());
         response.setNumeroFoja(request.getNumeroFoja());
-        response.setFechaActuacion(request.getFechaActuacion());
+        response.setFechaActuacion(fechaNormalizada);
 
         // Validar tipo de foja
         String tipoFoja = request.getTipoFoja();
@@ -69,7 +77,7 @@ public class FojaService {
                     idSubProducto,
                     request.getNumeroFoja(),
                     tiposComprobante,
-                    request.getFechaActuacion()); // Agregamos la fecha de actuación
+                    fechaNormalizada); // Uso fecha normalizada
 
             contenidosEncontrados.addAll(contenidos);
         }
@@ -94,7 +102,7 @@ public class FojaService {
 
         // Buscar escribanos habilitados para el registro en la fecha de actuación
         List<EscribanoHabilitadoDTO> escribanosHabilitados = escribanoService
-                .buscarEscribanosHabilitadosPorRegistro(numRegistro, request.getFechaActuacion());
+                .buscarEscribanosHabilitadosPorRegistro(numRegistro, fechaNormalizada);
 
         // Verificar si no hay escribanos habilitados
         if (escribanosHabilitados.isEmpty()) {
@@ -110,6 +118,26 @@ public class FojaService {
 
         return response;
     }
+
+// Método helper para normalizar la fecha (eliminar hora/minutos/segundos)
+private Date normalizarFecha(Date fecha) {
+    if (fecha == null) {
+        return null;
+    }
+    
+    // Usamos Calendar para manipular la fecha
+    Calendar cal = Calendar.getInstance();
+    cal.setTime(fecha);
+    
+    // Establecer hora, minutos, segundos y milisegundos a cero
+    cal.set(Calendar.HOUR_OF_DAY, 0);
+    cal.set(Calendar.MINUTE, 0);
+    cal.set(Calendar.SECOND, 0);
+    cal.set(Calendar.MILLISECOND, 0);
+    
+    return cal.getTime();
+}
+
 
     /**
      * Obtiene los pares de idProducto e idSubProducto correspondientes al tipo de

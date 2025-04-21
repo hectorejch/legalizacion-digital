@@ -119,7 +119,7 @@ public class Escribano {
     }
 
     public String getDocumento() {
-        return documento;
+        return documento.trim();
     }
 
     public void setDocumento(String documento) {
@@ -127,7 +127,7 @@ public class Escribano {
     }
 
     public String getCuit() {
-        return cuit;
+        return cuit.trim();
     }
 
     public void setCuit(String cuit) {
@@ -148,7 +148,7 @@ public class Escribano {
     }
 
     public String getEmail() {
-        return email;
+        return email.trim();
     }
 
     public void setEmail(String email) {
