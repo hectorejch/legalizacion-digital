@@ -7,8 +7,9 @@ public class AuthResponse {
                            // autorizado
     private String mensaje;
     private Long matricula;
+    private Integer registro;
     private String codigoSuplencia; // "1" hay suplencias disponibles, "2" no hay suplencias disponibles
-    private List<EscribanoHabilitadoDTO> suplenciasDisponibles;
+    private List<EscribanoSuplenciaDTO> suplenciasDisponibles;
 
     public String getCodigo() {
         return codigo;
@@ -42,11 +43,19 @@ public class AuthResponse {
         this.codigoSuplencia = codigoSuplencia;
     }
 
-    public List<EscribanoHabilitadoDTO> getSuplenciasDisponibles() {
+    public Integer getRegistro() {
+        return registro;
+    }
+
+    public void setRegistro(Integer registro) {
+        this.registro = registro;
+    }
+
+    public List<EscribanoSuplenciaDTO> getSuplenciasDisponibles() {
         return suplenciasDisponibles;
     }
 
-    public void setSuplenciasDisponibles(List<EscribanoHabilitadoDTO> suplenciasDisponibles) {
+    public void setSuplenciasDisponibles(List<EscribanoSuplenciaDTO> suplenciasDisponibles) {
         this.suplenciasDisponibles = suplenciasDisponibles;
     }
 }

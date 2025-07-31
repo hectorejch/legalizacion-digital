@@ -10,6 +10,7 @@ public class VerificarFojaResponse {
     private String mensaje;
     private String tipoFoja;
     private Integer numeroFoja;
+    private Integer numRegistro;
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "America/Argentina/Buenos_Aires")
     private Date fechaActuacion;
     private List<EscribanoHabilitadoDTO> escribanosHabilitados;
@@ -45,6 +46,14 @@ public class VerificarFojaResponse {
 
     public void setNumeroFoja(Integer numeroFoja) {
         this.numeroFoja = numeroFoja;
+    }
+
+    public Integer getNumRegistro() {
+        return numRegistro;
+    }
+
+    public void setNumRegistro(Integer numRegistro) {
+        this.numRegistro = numRegistro;
     }
 
     public Date getFechaActuacion() {

@@ -2,6 +2,8 @@ package ar.com.cnpmweb.legalizaciondigital.controller;
 
 import ar.com.cnpmweb.legalizaciondigital.dto.EscribanoDTO;
 import ar.com.cnpmweb.legalizaciondigital.dto.EscribanoHabilitadoDTO;
+import ar.com.cnpmweb.legalizaciondigital.dto.EscribanoSimpleDTO;
+import ar.com.cnpmweb.legalizaciondigital.dto.EscribanoSuplenciaDTO;
 import ar.com.cnpmweb.legalizaciondigital.dto.MatriculaHabilitadaDTO;
 import ar.com.cnpmweb.legalizaciondigital.service.EscribanoService;
 import org.slf4j.Logger;
@@ -33,6 +35,26 @@ public class EscribanoController {
         return ResponseEntity.ok(escribanos);
     }
 
+    /**
+     * Obtiene todos los escribanos autorizantes en formato simplificado.
+     */
+    @GetMapping("/autorizantes/simple")
+    public ResponseEntity<List<EscribanoSimpleDTO>> getAllAutorizantesSimple(
+            @RequestParam(required = false, defaultValue = "false") boolean soloActivos) {
+
+        if (soloActivos) {
+            logger.info("Consultando todos los escribanos autorizantes activos en formato simple");
+            List<EscribanoSimpleDTO> escribanos = escribanoService.getAllAutorizantesActivosSimple();
+            logger.info("Se encontraron {} escribanos autorizantes activos", escribanos.size());
+            return ResponseEntity.ok(escribanos);
+        } else {
+            logger.info("Consultando todos los escribanos autorizantes en formato simple");
+            List<EscribanoSimpleDTO> escribanos = escribanoService.getAllAutorizantesSimple();
+            logger.info("Se encontraron {} escribanos autorizantes", escribanos.size());
+            return ResponseEntity.ok(escribanos);
+        }
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<EscribanoDTO> getEscribanoById(@PathVariable Long id) {
         logger.info("Consulta del escribano con ID: {}", id);
@@ -44,7 +66,7 @@ public class EscribanoController {
             return ResponseEntity.ok(escribano);
         } else {
             logger.warn("No se encontró el escribano con ID: {}", id);
-            //return ResponseEntity.notFound().build();
+            // return ResponseEntity.notFound().build();
             return ResponseEntity.noContent().build();
         }
     }
@@ -61,7 +83,7 @@ public class EscribanoController {
         } else {
             logger.warn("No se encontró el escribano con documento: {}", documento);
             return ResponseEntity.noContent().build();
-            //return ResponseEntity.notFound().build();
+            // return ResponseEntity.notFound().build();
         }
     }
 
@@ -90,7 +112,7 @@ public class EscribanoController {
             return ResponseEntity.ok(suplente);
         } else {
             return ResponseEntity.noContent().build();
-            //return ResponseEntity.notFound().build();
+            // return ResponseEntity.notFound().build();
         }
     }
 
@@ -123,17 +145,17 @@ public class EscribanoController {
      * @return Lista de escribanos suplidos
      */
     @GetMapping("/{matricula}/supliendo")
-    public ResponseEntity<List<EscribanoHabilitadoDTO>> buscarAQuienesSuple(
+    public ResponseEntity<List<EscribanoSuplenciaDTO>> buscarAQuienesSuple(
             @PathVariable Long matricula,
             @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") Date fecha) {
 
         logger.info("Consultando a quiénes suple el escribano con matrícula {} en la fecha {}", matricula, fecha);
 
-        List<EscribanoHabilitadoDTO> suplidos = escribanoService.buscarAQuienesSuple(matricula, fecha);
+        List<EscribanoSuplenciaDTO> suplidos = escribanoService.buscarAQuienesSuple(matricula, fecha);
 
         if (suplidos.isEmpty()) {
             logger.info("El escribano con matrícula {} no está supliendo a nadie en la fecha {}", matricula, fecha);
-            //return ResponseEntity.ok(Collections.emptyList());
+            // return ResponseEntity.ok(Collections.emptyList());
             return ResponseEntity.noContent().build();
         } else {
             logger.info("El escribano con matrícula {} está supliendo a {} escribanos en la fecha {}",

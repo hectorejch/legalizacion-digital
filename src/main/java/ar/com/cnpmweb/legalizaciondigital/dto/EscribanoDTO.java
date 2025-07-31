@@ -12,8 +12,9 @@ public class EscribanoDTO {
     private String domicilio;
     private boolean activo;
     private Integer numeroRegistro;
+    private String cargo;
 
-    public Long getId() {
+     public Long getId() {
         return id;
     }
 
@@ -103,5 +104,13 @@ public class EscribanoDTO {
     
     public String getNombreCompleto() {
         return apellido + ", " + nombre;
+    }
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
     }
 }

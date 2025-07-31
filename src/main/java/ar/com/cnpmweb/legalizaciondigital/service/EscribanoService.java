@@ -3,11 +3,14 @@ package ar.com.cnpmweb.legalizaciondigital.service;
 import ar.com.cnpmweb.legalizaciondigital.dto.EscribanoDTO;
 import ar.com.cnpmweb.legalizaciondigital.dto.MatriculaHabilitadaDTO;
 import ar.com.cnpmweb.legalizaciondigital.dto.EscribanoHabilitadoDTO;
+import ar.com.cnpmweb.legalizaciondigital.dto.EscribanoSimpleDTO;
+import ar.com.cnpmweb.legalizaciondigital.dto.EscribanoSuplenciaDTO;
 import ar.com.cnpmweb.legalizaciondigital.model.Antecedente;
 import ar.com.cnpmweb.legalizaciondigital.model.Escribano;
 import ar.com.cnpmweb.legalizaciondigital.model.enums.CaracterEscribano;
 import ar.com.cnpmweb.legalizaciondigital.model.enums.TipoNovedad;
 import ar.com.cnpmweb.legalizaciondigital.repository.EscribanoRepository;
+import ar.com.cnpmweb.legalizaciondigital.util.DateUtils;
 import ar.com.cnpmweb.legalizaciondigital.repository.AntecedenteRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -118,14 +121,15 @@ public class EscribanoService {
             } else {
                 resultado.setCodigo("MATRICULA_VALIDA");
                 resultado.setMensaje("HABILITADO");
-                // Agregar la información del número de registro y carácter
-                if (antecedenteHabilitante != null) {
-                    resultado.setNumRegistro(antecedenteHabilitante.getNumRegistro());
+            }
+            // Agregar la información del número de registro y carácter
+            if (antecedenteHabilitante != null) {
+                resultado.setNumRegistro(antecedenteHabilitante.getNumRegistro());
 
-                    // Obtener la descripción del carácter en lugar del código
-                    CaracterEscribano caracter = antecedenteHabilitante.getCaracter();
-                    resultado.setCaracter(caracter != null ? caracter.getDescripcion() : null);
-                }
+                // Obtener la descripción del carácter en lugar del código
+                CaracterEscribano caracter = antecedenteHabilitante.getCaracter();
+                resultado.setCaracter(caracter != null ? caracter.getDescripcion() : null);
+                resultado.setCodigoCaracter(caracter != null ? caracter.getCodigo() : null);
             }
         } else {
             resultado.setCodigo("MATRICULA_NO_HABILITADA");
@@ -297,7 +301,7 @@ public class EscribanoService {
                             // Convertir a DTO y agregar el número de registro
                             EscribanoDTO suplenteDTO = convertToDTO(suplenteOpt.get());
                             // Podemos agregar información adicional si es necesario
-                            suplenteDTO.setNumeroRegistro(antecedente.getNumRegistro());
+                            //suplenteDTO.setNumeroRegistro(antecedente.getNumRegistro());
                             return suplenteDTO;
                         }
                     }
@@ -412,7 +416,8 @@ public class EscribanoService {
      * La fecha está en el rango si: fechaInicio <= fecha <= fechaFin
      */
     private boolean fechaEstaDentroDeRango(Date fecha, Date fechaInicio, Date fechaFin) {
-        if (fecha == null || fechaInicio == null) {
+        return DateUtils.fechaEstaDentroDeRango(fecha, fechaInicio, fechaFin);
+        /*if (fecha == null || fechaInicio == null) {
             return false;
         }
 
@@ -424,7 +429,7 @@ public class EscribanoService {
         }
         // Verificar si la fecha está entre fechaInicio y fechaFin (inclusive)
         // fecha >= fechaInicio && fecha <= fechaFin
-        return fecha.compareTo(fechaInicio) >= 0 && fecha.compareTo(fechaFin) <= 0;
+        return fecha.compareTo(fechaInicio) >= 0 && fecha.compareTo(fechaFin) <= 0;*/
     }
 
     /**
@@ -435,12 +440,12 @@ public class EscribanoService {
      * @return Lista de EscribanoHabilitadoDTO con los escribanos suplidos, vacía si
      *         no hay ninguno
      */
-    public List<EscribanoHabilitadoDTO> buscarAQuienesSuple(Escribano escribanoSuplente, Date fecha) {
+    public List<EscribanoSuplenciaDTO> buscarAQuienesSuple(Escribano escribanoSuplente, Date fecha) {
         logger.info("Verificando si el escribano {} es suplente de alguien en la fecha {}",
                 escribanoSuplente.getCliId(), fecha);
 
         Long idSuplente = escribanoSuplente.getCliId();
-        List<EscribanoHabilitadoDTO> escribanosSuplidos = new ArrayList<>();
+        List<EscribanoSuplenciaDTO> escribanosSuplidos = new ArrayList<>();
 
         // Buscar en los antecedentes donde este escribano figure como suplente,
         // el tipo de novedad sea LICENCIA, ambas fechas estén definidas y la fecha esté
@@ -461,12 +466,14 @@ public class EscribanoService {
                 logger.info("El escribano {} es suplente del escribano {} en la fecha {}",
                         idSuplente, idSuplido, fecha);
 
-                // Convertir a EscribanoHabilitadoDTO y agregar a la lista
+                // Convertir a EscribanoSuplenciaDTO y agregar a la lista
                 Escribano suplido = suplidoOpt.get();
-                EscribanoHabilitadoDTO suplidoDTO = new EscribanoHabilitadoDTO();
+                EscribanoSuplenciaDTO suplidoDTO = new EscribanoSuplenciaDTO();
                 suplidoDTO.setMatricula(suplido.getCliId());
                 suplidoDTO.setNombre(suplido.getNombre());
                 suplidoDTO.setApellido(suplido.getApellido());
+                suplidoDTO.setFechaDesde(antecedente.getFechaAlta());
+                suplidoDTO.setFechaHasta(antecedente.getFechaBaja());
 
                 escribanosSuplidos.add(suplidoDTO);
             }
@@ -485,7 +492,7 @@ public class EscribanoService {
     /**
      * Sobrecarga del método que recibe la matrícula en lugar del objeto Escribano.
      */
-    public List<EscribanoHabilitadoDTO> buscarAQuienesSuple(Long matriculaSuplente, Date fecha) {
+    public List<EscribanoSuplenciaDTO> buscarAQuienesSuple(Long matriculaSuplente, Date fecha) {
         logger.info("Verificando si el escribano con matrícula {} es suplente de alguien en la fecha {}",
                 matriculaSuplente, fecha);
 
@@ -503,16 +510,16 @@ public class EscribanoService {
      * Versión simplificada que devuelve solo el primer escribano suplido.
      * Útil cuando solo se necesita saber si es suplente de alguien.
      */
-    public EscribanoHabilitadoDTO buscarSiEsSuplente(Escribano escribanoSuplente, Date fecha) {
-        List<EscribanoHabilitadoDTO> suplidos = buscarAQuienesSuple(escribanoSuplente, fecha);
+    public EscribanoSuplenciaDTO buscarSiEsSuplente(Escribano escribanoSuplente, Date fecha) {
+        List<EscribanoSuplenciaDTO> suplidos = buscarAQuienesSuple(escribanoSuplente, fecha);
         return suplidos.isEmpty() ? null : suplidos.get(0);
     }
 
     /**
      * Sobrecarga de la versión simplificada.
      */
-    public EscribanoHabilitadoDTO buscarSiEsSuplente(Long matriculaSuplente, Date fecha) {
-        List<EscribanoHabilitadoDTO> suplidos = buscarAQuienesSuple(matriculaSuplente, fecha);
+    public EscribanoSuplenciaDTO buscarSiEsSuplente(Long matriculaSuplente, Date fecha) {
+        List<EscribanoSuplenciaDTO> suplidos = buscarAQuienesSuple(matriculaSuplente, fecha);
         return suplidos.isEmpty() ? null : suplidos.get(0);
     }
 
@@ -531,6 +538,46 @@ public class EscribanoService {
         return escribanoOpt.map(this::convertToDTO).orElse(null);
     }
 
+    /**
+     * Obtiene todos los escribanos autorizantes en un formato simplificado.
+     */
+    public List<EscribanoSimpleDTO> getAllAutorizantesSimple() {
+        logger.debug("HISTORICO - Obteniendo todos los escribanos autorizantes en formato simple");
+
+        List<Escribano> escribanos = escribanoRepository.findAllEscribanosAutorizantesHistorico();
+
+        return escribanos.stream()
+                .map(this::convertToSimpleDTO)
+                .collect(Collectors.toList());
+    }
+
+    /**
+     * Obtiene todos los escribanos autorizantes activos en un formato simplificado.
+     */
+    public List<EscribanoSimpleDTO> getAllAutorizantesActivosSimple() {
+        logger.debug("ACTUALES - Obteniendo todos los escribanos autorizantes activos en formato simple");
+
+        // Crear fecha nula para representar '0000-00-00'
+        Date fechaNula = DateUtils.crearFechaCero();
+
+        //List<Escribano> escribanos = escribanoRepository.findAllEscribanosAutorizantesActivos(fechaNula);
+        List<Escribano> escribanos = escribanoRepository.findAllEscribanosAutorizantesActivos();
+
+        return escribanos.stream()
+                .map(this::convertToSimpleDTO)
+                .collect(Collectors.toList());
+    }
+
+    /**
+     * Convierte un Escribano a un EscribanoSimpleDTO.
+     */
+    private EscribanoSimpleDTO convertToSimpleDTO(Escribano escribano) {
+        return new EscribanoSimpleDTO(
+                escribano.getCliId(),
+                escribano.getNombre(),
+                escribano.getApellido());
+    }
+
     private EscribanoDTO convertToDTO(Escribano escribano) {
         EscribanoDTO dto = new EscribanoDTO();
         dto.setId(escribano.getCliId());
@@ -543,6 +590,11 @@ public class EscribanoService {
         dto.setEmail(escribano.getEmail());
         dto.setDomicilio(escribano.getDomicilio());
         dto.setActivo(escribano.isActivo());
+        dto.setNumeroRegistro(escribano.getNumeroRegistro());
+        TipoNovedad cargo = escribano.getCargo();
+        if (cargo != null) {
+            dto.setCargo(cargo.getDescripcion());
+        }
         return dto;
     }
 }

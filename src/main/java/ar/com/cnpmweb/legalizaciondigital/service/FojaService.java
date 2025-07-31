@@ -11,8 +11,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -99,6 +97,13 @@ public class FojaService {
         // Obtener el contenido encontrado y su número de registro
         Contenido contenido = contenidosEncontrados.get(0);
         Integer numRegistro = contenido.getNumRegistro();
+
+        // Verificar si el número de registro es nulo
+        if (numRegistro == null) {
+            response.setCodigo("ERROR_NUM_REGISTRO_NULO");
+            response.setMensaje("El número de registro del contenido encontrado es nulo.");
+        }
+        response.setNumRegistro(numRegistro);
 
         // Buscar escribanos habilitados para el registro en la fecha de actuación
         List<EscribanoHabilitadoDTO> escribanosHabilitados = escribanoService

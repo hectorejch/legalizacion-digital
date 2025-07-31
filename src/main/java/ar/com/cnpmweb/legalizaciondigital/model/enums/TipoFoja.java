@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public enum TipoFoja {
+    // Actuación Notarial se legaliza, Protocolo Notarial no
     A_LEGALIZACION(28, 1, "Legalización", "A"),
     U_LEGALIZACION_URGENTE(28, 10, "Legalización Urgente", "U"),
     B_ACTUACION_NOTARIAL(4, 2, "Actuación Notarial", "B"),

@@ -44,6 +44,7 @@ public class AuthController {
             response.setCodigo(result.getCodigo());
             response.setMensaje(result.getMensaje());
             response.setMatricula(result.getMatricula());
+            response.setRegistro(result.getRegistro());
 
             if (result.tieneSuplenciasDisponibles()) {
                 response.setCodigoSuplencia("1"); // Hay suplencias disponibles

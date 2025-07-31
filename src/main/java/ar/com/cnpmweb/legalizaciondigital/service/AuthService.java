@@ -1,6 +1,6 @@
 package ar.com.cnpmweb.legalizaciondigital.service;
 
-import ar.com.cnpmweb.legalizaciondigital.dto.EscribanoHabilitadoDTO;
+import ar.com.cnpmweb.legalizaciondigital.dto.EscribanoSuplenciaDTO;
 import ar.com.cnpmweb.legalizaciondigital.dto.MatriculaHabilitadaDTO;
 import ar.com.cnpmweb.legalizaciondigital.model.Usuario;
 import ar.com.cnpmweb.legalizaciondigital.repository.UsuarioRepository;
@@ -63,6 +63,7 @@ public class AuthService {
 
         // Mensaje según el estado de habilitación
         if (result.isHabilitado()) {
+            result.setRegistro(verificacion.getNumRegistro());
             // Si tiene licencia activa, no buscar suplencias
             if (result.isLicenciaActiva()) {
                 result.setMensaje("Usuario con licencia activa");
@@ -70,7 +71,7 @@ public class AuthService {
             } else {
                 result.setMensaje("Usuario autorizado para operar");
                 // Buscar si es suplente de algún escribano
-                List<EscribanoHabilitadoDTO> suplencias = escribanoService.buscarAQuienesSuple(foundUser.getId(),
+                List<EscribanoSuplenciaDTO> suplencias = escribanoService.buscarAQuienesSuple(foundUser.getId(),
                         fechaActual);
                 result.setSuplenciasDisponibles(suplencias);
             }
@@ -78,7 +79,7 @@ public class AuthService {
             result.setMensaje("Este usuario no está autorizado para operar");
             result.setSuplenciasDisponibles(Collections.emptyList());
         }
-
+        
         return result;
     }
 
@@ -199,7 +200,8 @@ public class AuthService {
         private String codigo;
         private String mensaje;
         private Long matricula;
-        private List<EscribanoHabilitadoDTO> suplenciasDisponibles;
+        private Integer registro;
+        private List<EscribanoSuplenciaDTO> suplenciasDisponibles;
 
         public boolean isAutenticado() {
             return autenticado;
@@ -249,11 +251,19 @@ public class AuthService {
             this.matricula = matricula;
         }
 
-        public List<EscribanoHabilitadoDTO> getSuplenciasDisponibles() {
+        public Integer getRegistro() {
+            return registro;
+        }
+
+        public void setRegistro(Integer registro) {
+            this.registro = registro;
+        }
+
+        public List<EscribanoSuplenciaDTO> getSuplenciasDisponibles() {
             return suplenciasDisponibles;
         }
 
-        public void setSuplenciasDisponibles(List<EscribanoHabilitadoDTO> suplenciasDisponibles) {
+        public void setSuplenciasDisponibles(List<EscribanoSuplenciaDTO> suplenciasDisponibles) {
             this.suplenciasDisponibles = suplenciasDisponibles;
         }
 

@@ -5,6 +5,7 @@ public class MatriculaHabilitadaDTO {
     private String mensaje;
     private Integer numRegistro;
     private String caracter;
+    private Integer codigoCaracter;
 
     public MatriculaHabilitadaDTO() {
         // Constructor por defecto
@@ -48,5 +49,13 @@ public class MatriculaHabilitadaDTO {
 
     public void setCaracter(String caracter) {
         this.caracter = caracter;
+    }
+
+    public Integer getCodigoCaracter() {
+        return codigoCaracter;
+    }
+
+    public void setCodigoCaracter(Integer codigoCaracter) {
+        this.codigoCaracter = codigoCaracter;
     }
 }
