@@ -98,8 +98,8 @@ public class FojaService {
         Contenido contenido = contenidosEncontrados.get(0);
         Integer numRegistro = contenido.getNumRegistro();
 
-        // Verificar si el número de registro es nulo
-        if (numRegistro == null) {
+        // Verificar si el número de registro es nulo o cero
+        if (numRegistro == null || numRegistro == 0) {
             response.setCodigo("ERROR_NUM_REGISTRO_NULO");
             response.setMensaje("El número de registro del contenido encontrado es nulo.");
         }
